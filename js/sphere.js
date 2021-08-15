@@ -59,10 +59,7 @@ function sphere() {
 
 
   function onResize() {
-    PERSPECTIVE = width * 0.8;
-    PROJECTION_CENTER_X = width / 2 + DOT_RADIUS;
-    PROJECTION_CENTER_Y = height / 2 + DOT_RADIUS;
-    GLOBE_RADIUS = width / 3;
+    
     // We need to define the dimensions of the sphereCanvas to our sphereCanvas element
     // Javascript doesn't know the computed dimensions from CSS so we need to do it manually
     width = sphereCanvas.offsetWidth;
@@ -70,14 +67,17 @@ function sphere() {
 
     // If the screen device has a pixel ratio over 1
     // We render the sphereCanvas twice bigger to make it sharper (e.g. Retina iPhone)
-    if (window.devicePixelRatio > 1) {
-      //sphereCanvas.width = sphereCanvas.clientWidth * 2;
-      //sphereCanvas.height = sphereCanvas.clientHeight * 2;
-      //ctx.scale(2, 2);
-    } else {
-      sphereCanvas.width = width;
-      sphereCanvas.height = height;
-    }
+    // if (window.devicePixelRatio > 1) {
+    //   //sphereCanvas.width = sphereCanvas.clientWidth * 2;
+    //   //sphereCanvas.height = sphereCanvas.clientHeight * 2;
+    //   //ctx.scale(2, 2);
+    // } else {
+    sphereCanvas.width = width;
+    sphereCanvas.height = height;
+    PERSPECTIVE = width * 0.8;
+    PROJECTION_CENTER_X = width / 2 + DOT_RADIUS;
+    PROJECTION_CENTER_Y = height / 2 + DOT_RADIUS;
+    GLOBE_RADIUS = width / 3;
 
   }
   window.addEventListener('resize', onResize);

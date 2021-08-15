@@ -178,6 +178,10 @@ function load() {
     window.addEventListener("scroll", onScroll);
     onScroll();
   }
+  window.addEventListener('load', (event) => {
+    progress = 99;
+    setTimeout(doneLoading,100);
+  });
   function isSectionVisible(el) {
     var rect = el.getBoundingClientRect(),
       vWidth = window.innerWidth || document.documentElement.clientWidth,
@@ -254,7 +258,7 @@ function load() {
   }
   function increment() {
     if (progress >= 100) {
-      setTimeout(doneLoading, 300)
+      
       return;
     }
     progress += 1;

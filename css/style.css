@@ -317,6 +317,7 @@ header a {
   background: linear-gradient(to bottom, black, rgba(255, 255, 255, 0.5) 50vh);
 }
 .ddee {
+  z-index: 1;
   color: white;
   font-weight: 100;
   font-size: 2vw;
@@ -329,6 +330,7 @@ header a {
   left: 0;
 }
 .ideasToReality {
+  z-index: 1;
   color: white;
   font-family: "Caveat", cursive !important;
   font-size: 1vw;

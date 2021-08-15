@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Glitch</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <section>
+    <h5>Glitch Test</h5>
+    <div class="glitch">Poop</div>
+  </section>
+</body>
+
+</html>
+<script>
+  $(".glitch").each(function (index) {
+    let obj = '<span aria-hidden="true">' + $(this).text() + '</span>';
+    for (let i = 0; i < 2; ++i) {
+      $(this).append(obj);
+    }
+  });
+
+</script>
+<style>
+  :root {
+    --glitch-color-a: rgba(255, 0, 255, 0.5);
+    --glitch-color-b: rgba(255, 255, 0, 0.5);
+    --glitch-color-c: rgba(0, 255, 255, 0.5);
+  }
+
+  header {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: red;
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: black;
+  }
+
+  footer {
+    height: 50px;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .glitch {
+    position: relative;
+    margin: 100px;
+    color: white;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glitch 2300ms infinite;
+
+    /* -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end); */
+  }
+
+  .glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .glitch span:first-child {
+    animation: glitch 650ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%);
+    transform: translateX(-0.15em -0.025em);
+  }
+
+  .glitch span:last-child {
+    animation: glitch 800ms infinite;
+    clip-path: polygon(0 45%, 100% 45%, 100% 100%, 0 100%);
+    transform: translateX(0.05em 0.025em);
+  }
+
+  @keyframes glitch {
+    0% {
+      text-shadow: -0.05em 0em 0.0em var(--glitch-color-a),
+        0.05em 0.0em 0em var(--glitch-color-b),
+        0.07em 0.0em 0.0em var(--glitch-color-c);
+    }
+
+    85% {
+      text-shadow: -0.05em -0.0em 0.0em var(--glitch-color-a),
+        0.025em 0.0em 0.0em var(--glitch-color-b),
+        -0.05em -0.0em 0.0em var(--glitch-color-c);
+    }
+
+    90% {
+      text-shadow: -0.1em 0.0em 0.0em var(--glitch-color-a),
+        0.05em 0.0em 0.0em var(--glitch-color-b),
+        0.1em 0.0em 0.0em var(--glitch-color-c);
+    }
+
+    95% {
+      text-shadow: -0.025em -0.0em 0.0em var(--glitch-color-a),
+        -0.1em 0em 0.0em var(--glitch-color-b),
+        -0.025em -0.0em 0.0em var(--glitch-color-c);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+  }
+</style>

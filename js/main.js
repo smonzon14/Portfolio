@@ -179,7 +179,9 @@ function load() {
     onScroll();
   }
   window.addEventListener('load', (event) => {
-    progress = 99;
+    progress = 100;
+    bar.css("width", progress + "%");
+    label.html("" + progress + "%");
     setTimeout(doneLoading,100);
   });
   function isSectionVisible(el) {
@@ -257,7 +259,7 @@ function load() {
     }
   }
   function increment() {
-    if (progress >= 100) {
+    if (progress >= 90) {
       
       return;
     }

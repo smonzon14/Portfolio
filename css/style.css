@@ -428,7 +428,7 @@ header a {
   background-color: black;
   color: white;
   line-height: 1em;
-  font-size: 12vw;
+  font-size: 11vw;
   font-weight: bold;
   margin: 0 auto;
   width: 100%;
@@ -665,11 +665,11 @@ section {
     display: none !important;
   }
   .social {
-    top: 25vh;
+    top: 19vh;
   }
   .social li svg {
-    height: 45px;
-    width: 45px;
+    height: 15vw;
+    width: 15vw;
   }
   .ideasToReality {
     font-size: 4.5vw;
@@ -677,9 +677,10 @@ section {
   .cutout-text {
     top: 60%;
     left: 50%;
-    height: 60.5vw;
+    height: 68vw;
     width: 82vh;
-    padding-top: 40vw;
+    padding-top: 33vw;
+    font-size: 16vw;
     /* transform: rotate(90deg) translate(36%, 50%); */
     /* top: 41vh; */
     /* margin-top: -4rem; */
@@ -691,9 +692,12 @@ section {
   }
   .ideasToReality {
     padding-top: 2vw;
+    top: 14vh;
   }
   .ddee {
     padding-top: 0;
+
+    top: 19vh;
   }
 }
 

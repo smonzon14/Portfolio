@@ -31,7 +31,6 @@ function sphere() {
     return [...svg.children].map((e, j) => {
       let c = e.getAttribute("fill");
       if (c !== null) {
-        console.log(c);
         COLORS[i][j] = c;
       } else {
         COLORS[i][j] = COLORS[i][0] ? COLORS[i][0] : "#FFF";
@@ -103,7 +102,6 @@ function sphere() {
   sphereCanvas.addEventListener("mouseout", function (event) {
     mouse_moving = false;
     let theta = -1 * Math.atan2(mouse_y - height / 2, mouse_x - width / 2) + Math.PI * 0.5;
-    console.log(theta);
     let setSpeedZ = Math.cos(theta) * 0.1;
     let setSpeedY = Math.sin(theta) * 0.1;
     function slowDownSpin() {

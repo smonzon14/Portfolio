@@ -19,6 +19,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 header {
   top: 0;
   left: 0;
@@ -26,7 +27,7 @@ header {
   position: fixed;
   z-index: 999;
   height: 6rem;
-  width: 100%;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(4px);
 }
@@ -144,7 +145,8 @@ ul li {
 }
 .social {
   text-decoration: none;
-  position: relative;
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: center;
   top: 6rem;
@@ -229,9 +231,10 @@ ul li {
   color: white;
 }
 .glitch {
+  z-index: 3;
   position: relative;
   color: white;
-  font-size: 6rem;
+  font-size: 6vw;
   font-weight: bold;
   text-transform: uppercase;
   animation: glitch 1700ms infinite;
@@ -265,11 +268,11 @@ header a {
   /* filter: url('#chromaticAberration'); */
 }
 .contact-section {
-  text-shadow: 0px 0px 0.5em black;
+  text-shadow: 0px 0px 1.5em black;
   font-family: Quivera !important;
   font-weight: normal;
   position: relative;
-  font-size: 3vw !important;
+  font-size: 4vw !important;
   color: white;
   background-color: transparent;
   margin-left: 6rem;
@@ -306,7 +309,7 @@ header a {
 }
 .sideBar {
   position: absolute;
-  top: 20vh;
+  top: 50vh;
   height: 400vh;
   width: 1px;
   z-index: 1;
@@ -415,17 +418,17 @@ header a {
   color: white;
   /* border-bottom: 2px solid rgb(0, 255, 255); */
   background-color: transparent;
-  min-width: 400px;
+  min-width: 260px;
   left: 0;
   right: 50%;
   margin-left: 6rem;
 }
 
-#cutout-text {
+.cutout-text {
   background-color: black;
   color: white;
   line-height: 1em;
-  font-size: 11vw;
+  font-size: 12vw;
   font-weight: bold;
   margin: 0 auto;
   width: 100%;
@@ -461,6 +464,7 @@ header a {
   position: absolute;
   bottom: 0;
   left: 6rem;
+  right: 6rem;
   font-size: 1.5rem;
   color: white;
   /* filter: url("#chromaticAberration"); */
@@ -473,6 +477,9 @@ section {
   position: relative;
   width: 100%;
   height: 100vh;
+}
+#section04 {
+  overflow-x: hidden;
 }
 .divider-section {
   height: 20vh !important;
@@ -611,25 +618,84 @@ section {
       0.3em 0em 0em var(--glitch-color-b), 0.45em 0em 0em var(--glitch-color-c);
   }
 }
-
-/* @media only screen and (max-width: 700px) {
-  body{
-    font-size: 12px;
+.body-ul {
+  padding-inline-start: 0;
+}
+@media only screen and (max-width: 700px) {
+  #skills-sphere {
+    z-index: -1;
+    right: -40vw;
+    left: 40vw;
+    bottom: 50vh;
+    top: -10vh;
   }
-  .nameHeaderSubtitle{
+  #sphereCanvas {
+    width: 100vw;
+    height: 100vw;
+  }
+  #canvas {
+    height: 50vh;
+  }
+  .typed {
+    transform: translate(-50%, 10vh) rotate(90deg);
+  }
+  .rotate {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  }
+  .nameHeaderTitle {
+    text-align: center;
+    left: 20px;
+    right: 20px;
+    max-width: 100%;
+  }
+  .contact-section,
+  .text-section {
+    margin-left: 3rem;
+  }
+  .text-section p {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 0.7rem;
+  }
+  .subtitle-barcode .barcode {
     display: none !important;
   }
-  .headerLinks{
+  .headerLinks {
     display: none !important;
   }
-  #g{
-    font-size: 5rem;
+  .social {
+    top: 25vh;
   }
-  .social li svg{
-    height: 80px;
-    width: 80px;
+  .social li svg {
+    height: 45px;
+    width: 45px;
   }
-} */
+  .ideasToReality {
+    font-size: 4.5vw;
+  }
+  .cutout-text {
+    top: 60%;
+    left: 50%;
+    height: 60.5vw;
+    width: 82vh;
+    padding-top: 40vw;
+    /* transform: rotate(90deg) translate(36%, 50%); */
+    /* top: 41vh; */
+    /* margin-top: -4rem; */
+    /* left: -57%; */
+  }
+  .jelliesVideo {
+    width: 100%;
+    height: 80vh;
+  }
+  .ideasToReality {
+    padding-top: 2vw;
+  }
+  .ddee {
+    padding-top: 0;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,

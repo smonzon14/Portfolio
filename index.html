@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html>
-<div id="loadingContainer">
-  <a class="nameHeaderTitle loadHeaderTitle">/Sebastian Monzon <span class="nameHeaderSubtitle">Personal Website &
-      Portfolio</span></a>
-  <div class="loading">
-    <div class="bar">
-    </div>
-    <div class="label"><span>0%</span></div>
-  </div>
-</div>
+
 <head>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <title>Sebastian Monzon</title>
+  <script>
+    screen.lockOrientation('portrait');
+  </script>
   <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" />
@@ -20,59 +15,70 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Libre Barcode 39' rel='stylesheet'>
   <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <link rel="icon" type="image/png" href="favicon.png?v=2" />
+
 </head>
-<svg width="0" height="0" style="position: absolute; top:-4000px;">
-  <filter id="chromaticAberration">
-    <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
-              0 0 0 0 0
-              0 0 1 0 0
-              0 0 0 1 0" />
-    <feOffset in="red_" dx="1" dy="0" result="red" />
-    <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
-              0 3 0 0 0
-              0 0 10 0 0
-              0 0 0 1 0" />
-    <feOffset in="blue_" dx="-1" dy="1" result="blue" />
-    <feBlend mode="screen" in="red" in2="blue" />
 
-  </filter>
-</svg>
-
-<svg width="0" height="0" style="position: absolute; top:-4000px;">
-  <filter id="chromaticAberration2">
-    <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
-              0 1 0 0 0
-              0 0 0 0 0
-              0 0 0 1 0" />
-    <feOffset in="red_" dx="-1" dy="-1" result="red" />
-    <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
-              0 3 0 0 0
-              0 0 10 0 0
-              0 0 0 1 0" />
-    <feOffset in="blue_" dx="1" dy="1" result="blue" />
-    <feBlend mode="screen" in="red" in2="blue" />
-
-  </filter>
-</svg>
-<svg width="0" height="0" style="position: absolute; top:-4000px;">
-  <filter id="chromaticAberration3">
-    <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
-              0 0 0 0 0
-              0 0 1 0 0
-              0 0 0 1 0" />
-    <feOffset in="red_" dx="0.2" dy="0" result="red" />
-    <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
-              0 3 0 0 0
-              0 0 10 0 0
-              0 0 0 1 0" />
-    <feOffset in="blue_" dx="-0.2" dy="0.2" result="blue" />
-    <feBlend mode="screen" in="red" in2="blue" />
-
-  </filter>
-</svg>
 
 <body>
+  <div id="loadingContainer">
+    <a class="nameHeaderTitle loadHeaderTitle">/Sebastian Monzon <span class="nameHeaderSubtitle">Personal Website &
+        Portfolio</span></a>
+    <div class="loading">
+      <div class="bar">
+      </div>
+      <div class="label"><span>0%</span></div>
+    </div>
+  </div>
+  <svg width="0" height="0" style="position: absolute; top:-4000px;">
+    <filter id="chromaticAberration">
+      <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
+                0 0 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0" />
+      <feOffset in="red_" dx="1" dy="0" result="red" />
+      <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
+                0 3 0 0 0
+                0 0 10 0 0
+                0 0 0 1 0" />
+      <feOffset in="blue_" dx="-1" dy="1" result="blue" />
+      <feBlend mode="screen" in="red" in2="blue" />
   
+    </filter>
+  </svg>
+  
+  <svg width="0" height="0" style="position: absolute; top:-4000px;">
+    <filter id="chromaticAberration2">
+      <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
+                0 1 0 0 0
+                0 0 0 0 0
+                0 0 0 1 0" />
+      <feOffset in="red_" dx="-1" dy="-1" result="red" />
+      <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
+                0 3 0 0 0
+                0 0 10 0 0
+                0 0 0 1 0" />
+      <feOffset in="blue_" dx="1" dy="1" result="blue" />
+      <feBlend mode="screen" in="red" in2="blue" />
+  
+    </filter>
+  </svg>
+  <svg width="0" height="0" style="position: absolute; top:-4000px;">
+    <filter id="chromaticAberration3">
+      <feColorMatrix type="matrix" result="red_" values="4 0 0 0 0
+                0 0 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0" />
+      <feOffset in="red_" dx="0.2" dy="0" result="red" />
+      <feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="0 0 0 0 0
+                0 3 0 0 0
+                0 0 10 0 0
+                0 0 0 1 0" />
+      <feOffset in="blue_" dx="-0.2" dy="0.2" result="blue" />
+      <feBlend mode="screen" in="red" in2="blue" />
+  
+    </filter>
+  </svg>
   <header>
 
     <nav class="navbar navbar-default navbar-fixed-top ">
@@ -95,7 +101,7 @@
       <source src="videos/jellies2.mp4" type="video/mp4">
       </source>
     </video>
-    <div id="cutout-text">
+    <div class="cutout-text rotate">
       SEBASTIAN
       MONZON
       
@@ -242,7 +248,7 @@
   </section>
   <section id="section04">
     <h2 class="subtitle-barcode rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
-      <div id="my-skills-subtitle" class="typed glitch"></div><span class="barcode">My Skills</span>
+      <div id="my-skills-subtitle" class="typed glitch"></div><span class="barcode">Skills</span>
     </h2>
     <div class="section-barcode">
       Section-04<br><span class="barcode">Section-04</span>

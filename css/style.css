@@ -682,12 +682,15 @@ section {
     font-size: 4.5vw;
   }
   .cutout-text {
-    top: 60%;
-    left: 50%;
-    height: 68vw;
+    top: 58.5vh;
+    left: 47vw;
+    height: 106.1vw;
     width: 82vh;
-    padding-top: 33vw;
+    padding-top: 0;
+    padding-left: 6vh;
     font-size: 16vw;
+    align-items: center;
+    display: flex;
     /* transform: rotate(90deg) translate(36%, 50%); */
     /* top: 41vh; */
     /* margin-top: -4rem; */

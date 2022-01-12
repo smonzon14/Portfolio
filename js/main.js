@@ -171,7 +171,7 @@ function load() {
 
   sphere();
   hideSections();
-  pointer();
+  // pointer();
   function doneLoading() {
     loading.fadeOut(1000);
     typeGlitchTitle(['Web Developer', 'App Inventor', 'Entrepreneur'], "#g");

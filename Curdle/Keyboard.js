@@ -419,7 +419,7 @@ window.addEventListener("DOMContentLoaded", async function () {
   if(navigator.share) {
     navigator.share({
       title: 'Curdle Cheese Game',
-      text: 'Try to guess today\'s cheese on Curdle!',
+      text: 'Try to guess today\'s 5-letter cheese on Curdle!',
       url: 'https://smonzon.dev/Curdle'
     });
   }

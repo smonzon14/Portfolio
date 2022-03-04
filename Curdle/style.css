@@ -1,0 +1,233 @@
+:root {
+  font-size: 16px;
+  --game-max-width: 500px;
+}
+@font-face {
+  font-family: "CheesyFont";
+  src: url("CheesyFont.otf");
+}
+body {
+  margin: 0;
+  background-color: #121213;
+
+  overflow: hidden;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  height: 50px;
+  color: white;
+  border-bottom: 1px solid #3a3a3c;
+}
+header .title {
+  font-family: "CheesyFont";
+  font-weight: 200;
+  font-size: 37px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.game-container {
+  width: 100%;
+  max-width: var(--game-max-width);
+  margin: 0 auto;
+  height: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.grid {
+  width: 350px;
+  height: 420px;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+.grid-item {
+  border: 2px solid #3a3a3c;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+
+  transition-duration: 0.2s;
+}
+
+.keyboard {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  transition: bottom 0.4s;
+}
+
+.keyboard--hidden {
+  bottom: -100%;
+}
+
+.keyboard__keys {
+  text-align: center;
+  width: var(--game-max-width);
+}
+
+.keyboard__key {
+  font-weight: bold;
+  height: 58px;
+  text-transform: capitalize;
+  width: 8.3%;
+  max-width: 90px;
+  margin: 3px;
+  margin-bottom: 8px;
+  margin-top: 0;
+  border-radius: 4px;
+  border: none;
+  background: #818384;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+.tile {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.keyboard__key:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.keyboard__key--wide {
+  width: 13%;
+}
+
+.keyboard__key--extra-wide {
+  width: 36%;
+  max-width: 500px;
+}
+
+.keyboard__key--activatable::after {
+  content: "";
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+  background: #08ff00;
+}
+
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+#stats-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh + 150px);
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  transition: opacity 0.5s;
+  align-items: center;
+  z-index: 5;
+}
+
+.stats-message {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #121213dd;
+  padding: 40px;
+  width: 500px;
+  border-radius: 4px;
+
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+#the-word {
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#countdown {
+  font-size: 3rem;
+}
+.share {
+  display: flex;
+  justify-content: center;
+}
+#share-button {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 4px;
+  padding: 10;
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  background-color: #733285;
+}
+.dialog-container {
+  position: absolute;
+  top: calc(50px + 5%);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+}
+#dialog {
+  color: black;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
+  background-color: #ccc;
+  border-radius: 8px;
+}

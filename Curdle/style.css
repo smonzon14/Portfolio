@@ -12,12 +12,20 @@ body {
   touch-action: manipulation;
   overflow: hidden;
 }
+#help-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: space-between; */
-  justify-content: center;
+  justify-content: space-between;
+  /* justify-content: center; */
   flex-wrap: nowrap;
   padding: 0 16px;
   height: 50px;

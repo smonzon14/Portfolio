@@ -5,7 +5,7 @@ window.makeGuess = function (state) {
   const guess = state.guess;
   const numGuess = state.numGuess;
   const date = new Date();
-  const word = window.cheeses[(date.getYear() * 365 + date.getMonth() * 31 + date.getDay()) % window.cheeses.length];
+  const word = window.cheeses[(5*(date.getYear() * 365 + date.getMonth() * 31 + date.getDay())) % window.cheeses.length];
   const d = 5;
 
   if (guess.length == d && (window.cheeses.indexOf(guess) >= 0 || window.words.indexOf(guess) >= 0)) {

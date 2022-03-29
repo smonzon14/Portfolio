@@ -175,6 +175,8 @@ const Keyboard = {
         if (this.state.gameOver) {
           const theword = document.getElementById("the-word");
           theword.innerHTML = data.word;
+          let url = "https://www.google.com/search?q=" + data.word + "+cheese";
+          theword.href = url;
           const container = document.getElementById("stats-container");
           container.style.display = "flex";
           setTimeout(() => {

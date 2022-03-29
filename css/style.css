@@ -19,7 +19,7 @@
 html {
   scroll-behavior: smooth;
 }
-.grain {
+/* .grain {
   z-index: 0;
   position: fixed;
   right: 0;
@@ -30,7 +30,7 @@ html {
   background-repeat: repeat;
   background-position: 0 0;
   opacity: 0.06;
-}
+} */
 
 header {
   top: 0;
@@ -148,9 +148,9 @@ ul li {
 }
 .social li svg {
   fill: rgb(255, 255, 255);
-  height: 60px;
+  height: 45px;
   opacity: 1;
-  width: 60px;
+  width: 45px;
 }
 .social li {
   display: inline-block;

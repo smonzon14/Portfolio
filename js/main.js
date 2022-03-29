@@ -280,7 +280,7 @@ function isMobileDevice() {
 };
 var rellax;
 if (!isMobileDevice()) {
-  rellax = new Rellax('.rellax');
+  // rellax = new Rellax('.rellax');
 }
 
 function initGlitch(text, target) {
